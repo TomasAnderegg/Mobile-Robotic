@@ -7,7 +7,7 @@
 ## Demo
 
 > **Video coming soon**
-> ![Thymio Demo](media/good_kidnapp_local - Copie.gif)
+> ![Thymio Demo](media/good_kidnapp_local_Copie.gif)
  — A demonstration of the Thymio navigating the map autonomously.
 
 ## Overview
