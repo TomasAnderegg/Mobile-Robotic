@@ -22,11 +22,11 @@ The system combines five core modules:
 
 | Module | Role |
 |--------|------|
-| **Vision** | Camera-based detection of the robot, goal, and obstacles via color filtering and perspective transform |
+| **Vision** | Camera-based detection of the robot, goal and obstacles via color filtering and perspective transform |
 | **Path Planning** | A* search on a discretized grid to compute a global path |
 | **Motion Control** | Proportional controller to follow waypoints |
 | **Filtering** | Extended Kalman Filter (EKF) fusing vision and odometry |
-| **Safety** | Local obstacle avoidance (Braitenberg-style) and kidnapping detection |
+| **Safety** | Local obstacle avoidance and kidnapping detection |
 
 ## Architecture
 
@@ -38,7 +38,7 @@ The system combines five core modules:
 
 The overhead camera captures the physical map. The pipeline:
 
-1. **Perspective Transform** — Detects four black cross markers at the map corners using template matching (`cv2.matchTemplate`), then warps the image to a bird's-eye view.
+1. **Perspective Transform** — Detects four black cross markers at the map corners using template matching (`cv2.matchTemplate`), then warps the image to a bird's eye view.
 2. **Obstacle Detection** — Applies an HSV bandpass filter for blue objects, followed by morphological operations. Obstacles are dilated by the Thymio's footprint (~29 px) to allow point-representation of the robot.
 3. **Goal Detection** — Filters for green color in HSV, finds the largest contour, and computes its centroid.
 4. **Robot Pose Detection** — Detects two red circles on the Thymio (different sizes). The position is the midpoint of both circles; the heading is derived from `arctan2` between them.
@@ -74,7 +74,7 @@ Key parameters:
 
 ### 5. Safety Layer
 
-- **Local Obstacle Avoidance**: A weighted neural network (Braitenberg vehicle) reads the Thymio's 5 front proximity sensors and computes corrective motor commands to steer around unexpected obstacles.
+- **Local Obstacle Avoidance**: A weighted neural network reads the Thymio's 5 front proximity sensors and computes corrective motor commands to steer around unexpected obstacles.
 - **Kidnapping Detection**: Monitors accelerometer data. If a sudden high acceleration is detected alongside a ground sensor change, the robot stops immediately.
 
 ## Dependencies
@@ -90,7 +90,7 @@ Key parameters:
 
 1. Connect the Thymio robot via USB or wireless dongle.
 2. Set up the overhead camera pointing at the map (resolution: 1024x768).
-3. Place the map with four black cross markers at the corners, blue obstacles, a green goal, and the Thymio with two red markers.
+3. Place the map with four black cross markers at the corners, blue obstacles, a green goal and the Thymio with two red markers.
 4. Install dependencies:
    ```bash
    pip install tdmclient opencv-python numpy scipy matplotlib
@@ -115,10 +115,10 @@ The proportional controller gains were empirically tuned for specific conditions
 The A* planner assumes a static environment. If a new obstacle appears after planning, the system relies entirely on the local avoidance layer — there is no global replanning mechanism.
 
 ### Coordinate Frame Complexity
-Multiple reference frames (camera, bird's-eye, map grid, robot body) required several transforms scattered across the code, making debugging error-prone.
+Multiple reference frames (camera, bird's eye, map grid, robot body) required several transforms scattered across the code, making debugging error-prone.
 
 ### Hardcoded Configuration
-Camera index, file paths (e.g., template images), color thresholds, and robot parameters are hardcoded, reducing portability across different setups.
+Camera index, file paths (e.g., template images), color thresholds and robot parameters are hardcoded, reducing portability across different setups.
 
 ## Team
 
