@@ -6,14 +6,8 @@
 
 ## Demo
 
-<!-- TODO: Replace with your actual video -->
-<!-- Option 1: YouTube embed -->
-<!-- [![Thymio Demo](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID) -->
-
-<!-- Option 2: Local video file (GitHub won't play MP4 in markdown, use a GIF or a link) -->
-<!-- ![Thymio Demo](media/demo.gif) -->
-
-> **Video coming soon** ![Thymio Demo](media/good_kidnapp_local - Copie.gif)
+> **Video coming soon**
+> ![Thymio Demo](media/good_kidnapp_local - Copie.gif)
  — A demonstration of the Thymio navigating the map autonomously.
 
 ## Overview
