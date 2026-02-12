@@ -13,7 +13,8 @@
 <!-- Option 2: Local video file (GitHub won't play MP4 in markdown, use a GIF or a link) -->
 <!-- ![Thymio Demo](media/demo.gif) -->
 
-> **Video coming soon** — A demonstration of the Thymio navigating the map autonomously.
+> **Video coming soon** <video src="good_kidnapp_local - Copie.mp4" controls width="600"></video>
+ — A demonstration of the Thymio navigating the map autonomously.
 
 ## Overview
 
