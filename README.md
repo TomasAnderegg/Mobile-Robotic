@@ -7,7 +7,7 @@
 ## Demo
 
 <p align="center">
-  <img src="good_kidnapp_local_Copie.gif" alt="Thymio Demo" width="60%">
+  <img src="good_kidnapp_local_Copie.gif" alt="Thymio Demo" width="50%">
 </p>
 
 <p align="center">
