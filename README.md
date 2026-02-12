@@ -6,9 +6,13 @@
 
 ## Demo
 
-> **Video coming soon**
-> ![Thymio Demo](good_kidnapp_local_Copie.gif)
- — A demonstration of the Thymio navigating the map autonomously.
+<p align="center">
+  <img src="good_kidnapp_local_Copie.gif" alt="Thymio Demo" width="60%">
+</p>
+
+<p align="center">
+  <em>A demonstration of the Thymio navigating the map autonomously, showcasing its ability to handle obstacle avoidance and recover from kidnapping scenarios.</em>
+</p>
 
 ## Overview
 
